@@ -38,6 +38,10 @@ type Web struct {
 	client *Client
 }
 
+func (w *Web) GetClient() *Client {
+	return w.client	
+}
+
 func (w *Web) HandlePacket(packet *Packet) {
 	switch packet.EMsg {
 	case EMsg_ClientNewLoginKey:
